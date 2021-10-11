@@ -6,5 +6,6 @@ class Question
     @question = "What is #{x} plus #{y}?"
     @answer = x + y
   end
-  
+
+  attr_accessor :question, :answer
 end
