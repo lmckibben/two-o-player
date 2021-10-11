@@ -7,5 +7,5 @@ class Question
     @answer = x + y
   end
 
-  attr_accessor :question, :answer
+  attr_reader :question, :answer
 end
