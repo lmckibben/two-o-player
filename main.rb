@@ -10,5 +10,6 @@ game = Game.new([player1, player2])
 puts "Let the games begin! #{game.current_player.name} your turn frist"
 
 while !game.game_over do
-  question = Question.new(game.next_round)
+  ran_nums = game.next_round
+  question = Question.new(ran_nums)
 end
