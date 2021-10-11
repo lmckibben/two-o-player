@@ -1,7 +1,7 @@
 class Game
   def initialize(players)
     @players = players
-    @turn = 0
+    @round = 0
     @game_over = nil
     @winner = nil
     @current_player = @players.sample
@@ -14,10 +14,17 @@ class Game
   end
 
   def next_round
-    @turn += 1
+    @round += 1
     x = rand(1..20)
     y = rand(1..20)
     [x , y]
+  end
+
+  def handle_round(question)
+    puts "----- ROUND #{:round} ---"
+    puts "#{current_player.name}: #{question.question}"
+    answer = gets.chomp
+    
   end
 
 end
