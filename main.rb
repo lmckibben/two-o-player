@@ -12,7 +12,9 @@ puts "Let the games begin! #{game.current_player.name} your turn frist"
 while !game.game_over do
   ran_nums = game.next_round
   question = Question.new(ran_nums)
-  p question
 
   game.handle_round(question)
 end
+
+puts "#{game.winner.name} wins with a score of #{game.winner.lives}/3"
+puts "---- GAME OVER -----"
